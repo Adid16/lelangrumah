@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrasi</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-image: url("../image/home1.jpg"); /* Ganti dengan URL gambar Anda */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        color: white;
+      }
+
+      .register-container {
+        background-color: rgba(0, 31, 63, 0.8); /* #001f3f dengan sedikit transparansi */
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        width: 350px; /* Sedikit lebih lebar untuk menampung field tambahan */
+        text-align: center;
+      }
+
+      h2 {
+        color: #e47911; /* #e47911 */
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        color: #fff;
+        margin-bottom: 5px;
+        text-align: left;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f0f0f0;
+        color: #333;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #e47911; /* #e47911 */
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+      }
+
+      button:hover {
+        opacity: 0.9;
+      }
+
+      .error-message {
+        color: red;
+        margin-top: 10px;
+      }
+
+      .login-link {
+        margin-top: 15px;
+        font-size: 0.9em;
+      }
+
+      .login-link a {
+        color: #e47911;
+        text-decoration: none;
+      }
+
+      .login-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="register-container">
+      <h2>Daftar Akun</h2>
+      <div class="form-group">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Konfirmasi Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required />
+      </div>
+      <a href="login.html"><button type="submit">Daftar</button></a>
+      <p class="error-message" id="errorMessage"></p>
+      <p class="login-link">Sudah punya akun? <a href="login.html">Login</a></p>
+    </div>
+  </body>
+</html>
