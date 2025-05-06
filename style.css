@@ -16,6 +16,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
+  position: relative;
 }
 
 .logo {
@@ -41,11 +42,28 @@ nav {
   color: white;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .nav-button:hover {
   background-color: white;
   color: #001f3f;
+}
+
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.toggle-button span {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
 }
 
 .hero {
@@ -430,4 +448,29 @@ nav {
   margin-top: 30px;
   font-size: 14px;
   color: #bbb;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #001f3f;
+    padding: 20px;
+    width: 100%;
+    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  nav.active {
+    display: flex;
+  }
 }
