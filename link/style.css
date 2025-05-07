@@ -10,6 +10,159 @@ html {
   font-family: "Arial", sans-serif;
   background: #f0f0f0;
 }
+/* 
+navbar  */
+header {
+  background-color: #001f3f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 25px;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: white;
+  color: #001f3f;
+}
+
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.toggle-button span {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* list rumah  */
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.list-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.list-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.list-card .content {
+  padding: 15px;
+}
+
+.list-card .Limit {
+  color: #e47911;
+  font-weight: bold;
+  font-size: 12px;
+}
+.list-card .harga {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.list-card .jaminan {
+  color: #999;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.list-card .views {
+  float: right;
+  font-size: 0.85em;
+  color: #777;
+}
+
+.list-card .icons {
+  font-size: 0.85em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.list-card .location {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.list-card .address {
+  font-size: 0.8em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.list-card .schedule {
+  font-size: 0.8em;
+  color: #999;
+  margin-top: 10px;
+}
+
+.list-card button {
+  background-color: #f58220;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  cursor: pointer;
+  float: right;
+}
+
+.list-card button:hover {
+  background-color: #e16d00;
+}
+
+.list-card:hover {
+  background-color: #ffe571;
+  transition-duration: 1s;
+}
+
+/* detail ? */
 
 .full-screen-wrapper {
   min-height: 100vh;
@@ -103,6 +256,29 @@ html {
 }
 
 @media (max-width: 768px) {
+  /* navbar */
+  .toggle-button {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #001f3f;
+    padding: 20px;
+    width: 100%;
+    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
   .property-card {
     flex-direction: column;
   }

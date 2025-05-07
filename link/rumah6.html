@@ -9,15 +9,25 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <a href="../index.html" style="color: white; text-decoration: none"> <img src="../image/logo.png" width="60px" alt="" />LelangDisini </a>
+      <div class="logo"><img src="../image/logo.png" width="60px" alt="" />LelangDisini</div>
+      <div class="toggle-button" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <nav>
+      <nav id="navbar">
         <a href="../link/home-list.html"><button class="nav-button">Pilih Rumah</button></a>
         <a href="../link/register.html"><button class="nav-button">Daftar</button></a>
         <a href="../link/login.html"><button class="nav-button">Masuk</button></a>
       </nav>
+      <script>
+        function toggleMenu() {
+          const navbar = document.getElementById("navbar");
+          navbar.classList.toggle("active");
+        }
+      </script>
     </header>
+
     <div class="full-screen-wrapper">
       <div class="property-card">
         <div class="property-image">
