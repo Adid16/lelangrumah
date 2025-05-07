@@ -124,15 +124,6 @@ nav {
   font-size: 1em;
 }
 
-.search-icon {
-  margin-left: 15px;
-  font-size: 1.3em;
-  color: #001f3f;
-  background: #f1f1f1;
-  padding: 10px;
-  border-radius: 50%;
-}
-
 .search-button {
   padding: 15px 30px;
   background-color: #001f3f;
@@ -452,6 +443,7 @@ nav {
 
 /* responsive */
 @media (max-width: 768px) {
+  /* navbar */
   .toggle-button {
     display: flex;
   }
@@ -472,5 +464,72 @@ nav {
 
   nav.active {
     display: flex;
+  }
+  /* hero / halaman depan  */
+  .hero {
+    margin: 0;
+    width: 100%;
+    height: 400px; /* Ukuran gambar lebih kecil */
+    border-radius: 0px;
+  }
+
+  .hero-text h1 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .hero-text p {
+    font-size: 12px;
+  }
+
+  /* search */
+  .search-box {
+    top: 60%;
+    width: 95%;
+  }
+
+  .search-box input {
+    padding: 10px 15px;
+    width: 220px;
+    font-size: 12px;
+  }
+
+  .search-button {
+    padding: 10px 15px;
+    font-size: 15px;
+    border-width: 2px;
+  }
+
+  .search-button:hover {
+    padding: 10px 15px;
+    font-size: 15px;
+    border-width: 2px;
+  }
+
+  /* list */
+  .scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+  .list {
+    display: inline-flex;
+    gap: 20px;
+  }
+
+  .list-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 10px;
+    width: 300px;
+  }
+
+  /* keunggulan */
+  .feature-item {
+    padding: 20px 15px;
+    transition: transform 0.3s ease;
   }
 }
